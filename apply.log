@@ -1,0 +1,897 @@
+2025-05-30T16:05:22.107+0530 [INFO]  Terraform version: 1.12.1
+2025-05-30T16:05:22.107+0530 [DEBUG] using github.com/hashicorp/go-tfe v1.74.1
+2025-05-30T16:05:22.107+0530 [DEBUG] using github.com/hashicorp/hcl/v2 v2.23.1-0.20250203194505-ba0759438da2
+2025-05-30T16:05:22.107+0530 [DEBUG] using github.com/hashicorp/terraform-svchost v0.1.1
+2025-05-30T16:05:22.107+0530 [DEBUG] using github.com/zclconf/go-cty v1.16.2
+2025-05-30T16:05:22.107+0530 [INFO]  Go runtime version: go1.24.2
+2025-05-30T16:05:22.107+0530 [INFO]  CLI args: []string{"terraform", "apply", "-auto-approve"}
+2025-05-30T16:05:22.107+0530 [DEBUG] Attempting to open CLI config file: /home/anugrah/.terraformrc
+2025-05-30T16:05:22.107+0530 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2025-05-30T16:05:22.108+0530 [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2025-05-30T16:05:22.108+0530 [DEBUG] ignoring non-existing provider search directory /home/anugrah/.terraform.d/plugins
+2025-05-30T16:05:22.108+0530 [DEBUG] ignoring non-existing provider search directory /home/anugrah/.local/share/terraform/plugins
+2025-05-30T16:05:22.108+0530 [DEBUG] ignoring non-existing provider search directory /usr/share/ubuntu/terraform/plugins
+2025-05-30T16:05:22.108+0530 [DEBUG] ignoring non-existing provider search directory /usr/share/gnome/terraform/plugins
+2025-05-30T16:05:22.108+0530 [DEBUG] ignoring non-existing provider search directory /usr/local/share/terraform/plugins
+2025-05-30T16:05:22.108+0530 [DEBUG] ignoring non-existing provider search directory /usr/share/terraform/plugins
+2025-05-30T16:05:22.108+0530 [DEBUG] ignoring non-existing provider search directory /var/lib/snapd/desktop/terraform/plugins
+2025-05-30T16:05:22.109+0530 [INFO]  CLI command args: []string{"apply", "-auto-approve"}
+2025-05-30T16:05:22.385+0530 [DEBUG] checking for provisioner in "."
+2025-05-30T16:05:22.395+0530 [DEBUG] checking for provisioner in "/usr/bin"
+2025-05-30T16:05:22.396+0530 [INFO]  backend/local: starting Apply operation
+2025-05-30T16:05:22.410+0530 [DEBUG] created provider logger: level=debug
+2025-05-30T16:05:22.411+0530 [INFO]  provider: configuring client automatic mTLS
+2025-05-30T16:05:22.458+0530 [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/kreuzwerker/docker/3.0.2/linux_amd64/terraform-provider-docker_v3.0.2 args=[".terraform/providers/registry.terraform.io/kreuzwerker/docker/3.0.2/linux_amd64/terraform-provider-docker_v3.0.2"]
+2025-05-30T16:05:22.462+0530 [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/kreuzwerker/docker/3.0.2/linux_amd64/terraform-provider-docker_v3.0.2 pid=31777
+2025-05-30T16:05:22.463+0530 [DEBUG] provider: waiting for RPC address: plugin=.terraform/providers/registry.terraform.io/kreuzwerker/docker/3.0.2/linux_amd64/terraform-provider-docker_v3.0.2
+2025-05-30T16:05:22.511+0530 [INFO]  provider.terraform-provider-docker_v3.0.2: configuring server automatic mTLS: timestamp="2025-05-30T16:05:22.509+0530"
+2025-05-30T16:05:22.541+0530 [DEBUG] provider: using plugin: version=5
+2025-05-30T16:05:22.542+0530 [DEBUG] provider.terraform-provider-docker_v3.0.2: plugin address: address=/tmp/plugin3690722302 network=unix timestamp="2025-05-30T16:05:22.541+0530"
+2025-05-30T16:05:22.643+0530 [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2025-05-30T16:05:22.649+0530 [INFO]  provider: plugin process exited: plugin=.terraform/providers/registry.terraform.io/kreuzwerker/docker/3.0.2/linux_amd64/terraform-provider-docker_v3.0.2 id=31777
+2025-05-30T16:05:22.649+0530 [DEBUG] provider: plugin exited
+2025-05-30T16:05:22.653+0530 [DEBUG] Building and walking validate graph
+2025-05-30T16:05:22.657+0530 [DEBUG] ProviderTransformer: "docker_image.nginx" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/kreuzwerker/docker"]
+2025-05-30T16:05:22.658+0530 [DEBUG] ProviderTransformer: "docker_container.devops_container" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/kreuzwerker/docker"]
+2025-05-30T16:05:22.664+0530 [DEBUG] ReferenceTransformer: "docker_image.nginx" references: []
+2025-05-30T16:05:22.665+0530 [DEBUG] ReferenceTransformer: "docker_container.devops_container" references: [docker_image.nginx]
+2025-05-30T16:05:22.666+0530 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/kreuzwerker/docker\"]" references: []
+2025-05-30T16:05:22.668+0530 [DEBUG] Starting graph walk: walkValidate
+2025-05-30T16:05:22.674+0530 [DEBUG] created provider logger: level=debug
+2025-05-30T16:05:22.674+0530 [INFO]  provider: configuring client automatic mTLS
+2025-05-30T16:05:22.688+0530 [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/kreuzwerker/docker/3.0.2/linux_amd64/terraform-provider-docker_v3.0.2 args=[".terraform/providers/registry.terraform.io/kreuzwerker/docker/3.0.2/linux_amd64/terraform-provider-docker_v3.0.2"]
+2025-05-30T16:05:22.689+0530 [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/kreuzwerker/docker/3.0.2/linux_amd64/terraform-provider-docker_v3.0.2 pid=31805
+2025-05-30T16:05:22.690+0530 [DEBUG] provider: waiting for RPC address: plugin=.terraform/providers/registry.terraform.io/kreuzwerker/docker/3.0.2/linux_amd64/terraform-provider-docker_v3.0.2
+2025-05-30T16:05:22.742+0530 [INFO]  provider.terraform-provider-docker_v3.0.2: configuring server automatic mTLS: timestamp="2025-05-30T16:05:22.742+0530"
+2025-05-30T16:05:22.781+0530 [DEBUG] provider: using plugin: version=5
+2025-05-30T16:05:22.781+0530 [DEBUG] provider.terraform-provider-docker_v3.0.2: plugin address: address=/tmp/plugin1924733300 network=unix timestamp="2025-05-30T16:05:22.780+0530"
+2025-05-30T16:05:22.884+0530 [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2025-05-30T16:05:22.891+0530 [INFO]  provider: plugin process exited: plugin=.terraform/providers/registry.terraform.io/kreuzwerker/docker/3.0.2/linux_amd64/terraform-provider-docker_v3.0.2 id=31805
+2025-05-30T16:05:22.891+0530 [DEBUG] provider: plugin exited
+2025-05-30T16:05:22.892+0530 [INFO]  backend/local: apply calling Plan
+2025-05-30T16:05:22.893+0530 [DEBUG] Building and walking plan graph for NormalMode
+2025-05-30T16:05:22.897+0530 [DEBUG] ProviderTransformer: "docker_image.nginx (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/kreuzwerker/docker"]
+2025-05-30T16:05:22.897+0530 [DEBUG] ProviderTransformer: "docker_container.devops_container (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/kreuzwerker/docker"]
+2025-05-30T16:05:22.898+0530 [DEBUG] ReferenceTransformer: "docker_image.nginx (expand)" references: []
+2025-05-30T16:05:22.898+0530 [DEBUG] ReferenceTransformer: "docker_container.devops_container (expand)" references: [docker_image.nginx (expand)]
+2025-05-30T16:05:22.898+0530 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/kreuzwerker/docker\"]" references: []
+2025-05-30T16:05:22.900+0530 [DEBUG] Starting graph walk: walkPlan
+2025-05-30T16:05:22.900+0530 [DEBUG] created provider logger: level=debug
+2025-05-30T16:05:22.900+0530 [INFO]  provider: configuring client automatic mTLS
+2025-05-30T16:05:22.909+0530 [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/kreuzwerker/docker/3.0.2/linux_amd64/terraform-provider-docker_v3.0.2 args=[".terraform/providers/registry.terraform.io/kreuzwerker/docker/3.0.2/linux_amd64/terraform-provider-docker_v3.0.2"]
+2025-05-30T16:05:22.914+0530 [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/kreuzwerker/docker/3.0.2/linux_amd64/terraform-provider-docker_v3.0.2 pid=31825
+2025-05-30T16:05:22.914+0530 [DEBUG] provider: waiting for RPC address: plugin=.terraform/providers/registry.terraform.io/kreuzwerker/docker/3.0.2/linux_amd64/terraform-provider-docker_v3.0.2
+2025-05-30T16:05:22.960+0530 [INFO]  provider.terraform-provider-docker_v3.0.2: configuring server automatic mTLS: timestamp="2025-05-30T16:05:22.959+0530"
+2025-05-30T16:05:22.987+0530 [DEBUG] provider: using plugin: version=5
+2025-05-30T16:05:22.987+0530 [DEBUG] provider.terraform-provider-docker_v3.0.2: plugin address: address=/tmp/plugin3288665790 network=unix timestamp="2025-05-30T16:05:22.986+0530"
+2025-05-30T16:05:23.039+0530 [WARN]  ValidateProviderConfig from "provider[\"registry.terraform.io/kreuzwerker/docker\"]" changed the config value, but that value is unused
+2025-05-30T16:05:23.050+0530 [DEBUG] Resource instance state not found for node "docker_image.nginx", instance docker_image.nginx
+2025-05-30T16:05:23.050+0530 [DEBUG] ReferenceTransformer: "docker_image.nginx" references: []
+2025-05-30T16:05:23.053+0530 [DEBUG] refresh: docker_image.nginx: no state, so not refreshing
+2025-05-30T16:05:23.076+0530 [DEBUG] Resource instance state not found for node "docker_container.devops_container", instance docker_container.devops_container
+2025-05-30T16:05:23.076+0530 [DEBUG] ReferenceTransformer: "docker_container.devops_container" references: []
+2025-05-30T16:05:23.077+0530 [DEBUG] refresh: docker_container.devops_container: no state, so not refreshing
+2025-05-30T16:05:23.088+0530 [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/05/30 16:05:23 [DEBUG] suppress diff ports: old and new don't have the same length: timestamp="2025-05-30T16:05:23.087+0530"
+2025-05-30T16:05:23.088+0530 [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/05/30 16:05:23 [DEBUG] suppress diff ports: old and new don't have the same length: timestamp="2025-05-30T16:05:23.087+0530"
+2025-05-30T16:05:23.088+0530 [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/05/30 16:05:23 [DEBUG] suppress diff ports: old and new don't have the same length: timestamp="2025-05-30T16:05:23.087+0530"
+2025-05-30T16:05:23.088+0530 [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/05/30 16:05:23 [DEBUG] suppress diff ports: old and new don't have the same length: timestamp="2025-05-30T16:05:23.088+0530"
+2025-05-30T16:05:23.088+0530 [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/05/30 16:05:23 [DEBUG] suppress diff ports: old and new don't have the same length: timestamp="2025-05-30T16:05:23.088+0530"
+2025-05-30T16:05:23.094+0530 [WARN]  Provider "registry.terraform.io/kreuzwerker/docker" produced an invalid plan for docker_container.devops_container, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .tty: planned value cty.False for a non-computed attribute
+      - .wait: planned value cty.False for a non-computed attribute
+      - .must_run: planned value cty.True for a non-computed attribute
+      - .logs: planned value cty.False for a non-computed attribute
+      - .container_read_refresh_timeout_milliseconds: planned value cty.NumberIntVal(15000) for a non-computed attribute
+      - .read_only: planned value cty.False for a non-computed attribute
+      - .start: planned value cty.True for a non-computed attribute
+      - .rm: planned value cty.False for a non-computed attribute
+      - .stdin_open: planned value cty.False for a non-computed attribute
+      - .attach: planned value cty.False for a non-computed attribute
+      - .wait_timeout: planned value cty.NumberIntVal(60) for a non-computed attribute
+      - .remove_volumes: planned value cty.True for a non-computed attribute
+      - .restart: planned value cty.StringVal("no") for a non-computed attribute
+      - .healthcheck: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .labels: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .ports[0].protocol: planned value cty.StringVal("tcp") for a non-computed attribute
+      - .ports[0].ip: planned value cty.StringVal("0.0.0.0") for a non-computed attribute
+2025-05-30T16:05:23.097+0530 [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2025-05-30T16:05:23.104+0530 [INFO]  provider: plugin process exited: plugin=.terraform/providers/registry.terraform.io/kreuzwerker/docker/3.0.2/linux_amd64/terraform-provider-docker_v3.0.2 id=31825
+2025-05-30T16:05:23.104+0530 [DEBUG] provider: plugin exited
+2025-05-30T16:05:23.109+0530 [DEBUG] building apply graph to check for errors
+2025-05-30T16:05:23.111+0530 [DEBUG] Resource state not found for node "docker_image.nginx", instance docker_image.nginx
+2025-05-30T16:05:23.111+0530 [DEBUG] Resource state not found for node "docker_container.devops_container", instance docker_container.devops_container
+2025-05-30T16:05:23.112+0530 [DEBUG] ProviderTransformer: "docker_container.devops_container (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/kreuzwerker/docker"]
+2025-05-30T16:05:23.112+0530 [DEBUG] ProviderTransformer: "docker_image.nginx" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/kreuzwerker/docker"]
+2025-05-30T16:05:23.112+0530 [DEBUG] ProviderTransformer: "docker_container.devops_container" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/kreuzwerker/docker"]
+2025-05-30T16:05:23.112+0530 [DEBUG] ProviderTransformer: "docker_image.nginx (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/kreuzwerker/docker"]
+2025-05-30T16:05:23.113+0530 [DEBUG] ReferenceTransformer: "docker_container.devops_container (expand)" references: [docker_image.nginx docker_image.nginx docker_image.nginx (expand)]
+2025-05-30T16:05:23.114+0530 [DEBUG] ReferenceTransformer: "docker_image.nginx" references: []
+2025-05-30T16:05:23.114+0530 [DEBUG] ReferenceTransformer: "docker_container.devops_container" references: [docker_image.nginx docker_image.nginx docker_image.nginx (expand)]
+2025-05-30T16:05:23.114+0530 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/kreuzwerker/docker\"]" references: []
+2025-05-30T16:05:23.114+0530 [DEBUG] ReferenceTransformer: "docker_image.nginx (expand)" references: []
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [32m+[0m create[0m
+
+Terraform will perform the following actions:
+
+[1m  # docker_container.devops_container[0m will be created
+[0m  [32m+[0m[0m resource "docker_container" "devops_container" {
+      [32m+[0m[0m attach                                      = false
+      [32m+[0m[0m bridge                                      = (known after apply)
+      [32m+[0m[0m command                                     = (known after apply)
+      [32m+[0m[0m container_logs                              = (known after apply)
+      [32m+[0m[0m container_read_refresh_timeout_milliseconds = 15000
+      [32m+[0m[0m entrypoint                                  = (known after apply)
+      [32m+[0m[0m env                                         = (known after apply)
+      [32m+[0m[0m exit_code                                   = (known after apply)
+      [32m+[0m[0m hostname                                    = (known after apply)
+      [32m+[0m[0m id                                          = (known after apply)
+      [32m+[0m[0m image                                       = (known after apply)
+      [32m+[0m[0m init                                        = (known after apply)
+      [32m+[0m[0m ipc_mode                                    = (known after apply)
+      [32m+[0m[0m log_driver                                  = (known after apply)
+      [32m+[0m[0m logs                                        = false
+      [32m+[0m[0m must_run                                    = true
+      [32m+[0m[0m name                                        = "devops-terraform-container"
+      [32m+[0m[0m network_data                                = (known after apply)
+      [32m+[0m[0m read_only                                   = false
+      [32m+[0m[0m remove_volumes                              = true
+      [32m+[0m[0m restart                                     = "no"
+      [32m+[0m[0m rm                                          = false
+      [32m+[0m[0m runtime                                     = (known after apply)
+      [32m+[0m[0m security_opts                               = (known after apply)
+      [32m+[0m[0m shm_size                                    = (known after apply)
+      [32m+[0m[0m start                                       = true
+      [32m+[0m[0m stdin_open                                  = false
+      [32m+[0m[0m stop_signal                                 = (known after apply)
+      [32m+[0m[0m stop_timeout                                = (known after apply)
+      [32m+[0m[0m tty                                         = false
+      [32m+[0m[0m wait                                        = false
+      [32m+[0m[0m wait_timeout                                = 60
+
+      [32m+[0m[0m healthcheck (known after apply)
+
+      [32m+[0m[0m labels (known after apply)
+
+      [32m+[0m[0m ports {
+          [32m+[0m[0m external = 8080
+          [32m+[0m[0m internal = 80
+          [32m+[0m[0m ip       = "0.0.0.0"
+          [32m+[0m[0m protocol = "tcp"
+        }
+    }
+
+[1m  # docker_image.nginx[0m will be created
+[0m  [32m+[0m[0m resource "docker_image" "nginx" {
+      [32m+[0m[0m id           = (known after apply)
+      [32m+[0m[0m image_id     = (known after apply)
+      [32m+[0m[0m keep_locally = true
+      [32m+[0m[0m name         = "nginx:latest"
+      [32m+[0m[0m repo_digest  = (known after apply)
+    }
+
+[1mPlan:[0m 2 to add, 0 to change, 0 to destroy.
+[0m2025-05-30T16:05:23.133+0530 [INFO]  backend/local: apply calling Apply
+2025-05-30T16:05:23.133+0530 [DEBUG] Building and walking apply graph for NormalMode plan
+2025-05-30T16:05:23.134+0530 [DEBUG] Resource state not found for node "docker_image.nginx", instance docker_image.nginx
+2025-05-30T16:05:23.134+0530 [DEBUG] Resource state not found for node "docker_container.devops_container", instance docker_container.devops_container
+2025-05-30T16:05:23.135+0530 [DEBUG] ProviderTransformer: "docker_image.nginx (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/kreuzwerker/docker"]
+2025-05-30T16:05:23.135+0530 [DEBUG] ProviderTransformer: "docker_container.devops_container (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/kreuzwerker/docker"]
+2025-05-30T16:05:23.135+0530 [DEBUG] ProviderTransformer: "docker_image.nginx" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/kreuzwerker/docker"]
+2025-05-30T16:05:23.135+0530 [DEBUG] ProviderTransformer: "docker_container.devops_container" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/kreuzwerker/docker"]
+2025-05-30T16:05:23.136+0530 [DEBUG] ReferenceTransformer: "docker_container.devops_container (expand)" references: [docker_image.nginx docker_image.nginx docker_image.nginx (expand)]
+2025-05-30T16:05:23.136+0530 [DEBUG] ReferenceTransformer: "docker_image.nginx" references: []
+2025-05-30T16:05:23.136+0530 [DEBUG] ReferenceTransformer: "docker_container.devops_container" references: [docker_image.nginx docker_image.nginx docker_image.nginx (expand)]
+2025-05-30T16:05:23.136+0530 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/kreuzwerker/docker\"]" references: []
+2025-05-30T16:05:23.136+0530 [DEBUG] ReferenceTransformer: "docker_image.nginx (expand)" references: []
+2025-05-30T16:05:23.138+0530 [DEBUG] Starting graph walk: walkApply
+2025-05-30T16:05:23.138+0530 [DEBUG] created provider logger: level=debug
+2025-05-30T16:05:23.138+0530 [INFO]  provider: configuring client automatic mTLS
+2025-05-30T16:05:23.148+0530 [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/kreuzwerker/docker/3.0.2/linux_amd64/terraform-provider-docker_v3.0.2 args=[".terraform/providers/registry.terraform.io/kreuzwerker/docker/3.0.2/linux_amd64/terraform-provider-docker_v3.0.2"]
+2025-05-30T16:05:23.150+0530 [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/kreuzwerker/docker/3.0.2/linux_amd64/terraform-provider-docker_v3.0.2 pid=31836
+2025-05-30T16:05:23.150+0530 [DEBUG] provider: waiting for RPC address: plugin=.terraform/providers/registry.terraform.io/kreuzwerker/docker/3.0.2/linux_amd64/terraform-provider-docker_v3.0.2
+2025-05-30T16:05:23.192+0530 [INFO]  provider.terraform-provider-docker_v3.0.2: configuring server automatic mTLS: timestamp="2025-05-30T16:05:23.192+0530"
+2025-05-30T16:05:23.226+0530 [DEBUG] provider: using plugin: version=5
+2025-05-30T16:05:23.226+0530 [DEBUG] provider.terraform-provider-docker_v3.0.2: plugin address: address=/tmp/plugin918598594 network=unix timestamp="2025-05-30T16:05:23.225+0530"
+2025-05-30T16:05:23.288+0530 [WARN]  ValidateProviderConfig from "provider[\"registry.terraform.io/kreuzwerker/docker\"]" changed the config value, but that value is unused
+[0m[1mdocker_image.nginx: Creating...[0m[0m
+2025-05-30T16:05:23.306+0530 [INFO]  Starting apply for docker_image.nginx
+2025-05-30T16:05:23.307+0530 [DEBUG] docker_image.nginx: applying the planned Create change
+[0m[1mdocker_image.nginx: Still creating... [00m10s elapsed][0m[0m
+[0m[1mdocker_image.nginx: Still creating... [00m20s elapsed][0m[0m
+[0m[1mdocker_image.nginx: Still creating... [00m30s elapsed][0m[0m
+[0m[1mdocker_image.nginx: Still creating... [00m40s elapsed][0m[0m
+[0m[1mdocker_image.nginx: Still creating... [00m50s elapsed][0m[0m
+[0m[1mdocker_image.nginx: Still creating... [01m00s elapsed][0m[0m
+[0m[1mdocker_image.nginx: Still creating... [01m10s elapsed][0m[0m
+2025-05-30T16:06:41.010+0530 [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/05/30 16:06:41 [DEBUG] pulled image nginx:latest: {"status":"Pulling from library/nginx","id":"latest"}
+{"status":"Pulling fs layer","progressDetail":{},"id":"61320b01ae5e"}
+{"status":"Pulling fs layer","progressDetail":{},"id":"670a101d432b"}
+{"status":"Pulling fs layer","progressDetail":{},"id":"405bd2df85b6"}
+{"status":"Pulling fs layer","progressDetail":{},"id":"cc80efff8457"}
+{"status":"Pulling fs layer","progressDetail":{},"id":"2b9310b2ee4b"}
+{"status":"Pulling fs layer","progressDetail":{},"id":"6c4aa022e8e1"}
+{"status":"Pulling fs layer","progressDetail":{},"id":"abddc69cb49d"}
+{"status":"Waiting","progressDetail":{},"id":"abddc69cb49d"}
+{"status":"Waiting","progressDetail":{},"id":"2b9310b2ee4b"}
+{"status":"Waiting","progressDetail":{},"id":"6c4aa022e8e1"}
+{"status":"Waiting","progressDetail":{},"id":"cc80efff8457"}
+{"status":"Downloading","progressDetail":{"current":629,"total":629},"progress":"[==================================================\u003e]     629B/629B","id":"405bd2df85b6"}
+{"status":"Verifying Checksum","progressDetail":{},"id":"405bd2df85b6"}
+{"status":"Download complete","progressDetail":{},"id":"405bd2df85b6"}
+{"status":"Downloading","progressDetail":{"current":294169,"total":28225330},"progress":"[\u003e                                                  ]  294.2kB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":442368,"total":44151070},"progress":"[\u003e                                                  ]  442.4kB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":589081,"total":28225330},"progress":"[=\u003e                                                 ]  589.1kB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":883993,"total":28225330},"progress":"[=\u003e                                                 ]    884kB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":891118,"total":44151070},"progress":"[=\u003e                                                 ]  891.1kB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":1178905,"total":28225330},"progress":"[==\u003e                                                ]  1.179MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":1333486,"total":44151070},"progress":"[=\u003e                                                 ]  1.333MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":1473817,"total":28225330},"progress":"[==\u003e                                                ]  1.474MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":1768729,"total":28225330},"progress":"[===\u003e                                               ]  1.769MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":1775854,"total":44151070},"progress":"[==\u003e                                                ]  1.776MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":2063641,"total":28225330},"progress":"[===\u003e                                               ]  2.064MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":2358553,"total":28225330},"progress":"[====\u003e                                              ]  2.359MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":2218222,"total":44151070},"progress":"[==\u003e                                                ]  2.218MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":2653465,"total":28225330},"progress":"[====\u003e                                              ]  2.653MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":721,"total":956},"progress":"[=====================================\u003e             ]     721B/956B","id":"cc80efff8457"}
+{"status":"Downloading","progressDetail":{"current":956,"total":956},"progress":"[==================================================\u003e]     956B/956B","id":"cc80efff8457"}
+{"status":"Verifying Checksum","progressDetail":{},"id":"cc80efff8457"}
+{"status":"Download complete","progressDetail":{},"id":"cc80efff8457"}
+{"status":"Downloading","progressDetail":{"current":2948377,"total":28225330},"progress":"[=====\u003e                                             ]  2.948MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":2672878,"total":44151070},"progress":"[===\u003e                                               ]  2.673MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":3243289,"total":28225330},"progress":"[=====\u003e                                             ]  3.243MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":3538201,"total":28225330},"progress":"[======\u003e                                            ]  3.538MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":3115246,"total":44151070},"progress":"[===\u003e                                               ]  3.115MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":3833113,"total":28225330},"progress":"[======\u003e                                            ]  3.833MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":4128025,"total":28225330},"progress":"[=======\u003e                                           ]  4.128MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":3557614,"total":44151070},"progress":"[====\u003e                                              ]  3.558MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":4417752,"total":28225330},"progress":"[=======\u003e                                           ]  4.418MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":4712664,"total":28225330},"progress":"[========\u003e                                          ]  4.713MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":3999982,"total":44151070},"progress":"[====\u003e                                              ]      4MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":5007576,"total":28225330},"progress":"[========\u003e                                          ]  5.008MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":4454638,"total":44151070},"progress":"[=====\u003e                                             ]  4.455MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":5302488,"total":28225330},"progress":"[=========\u003e                                         ]  5.302MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":5597400,"total":28225330},"progress":"[=========\u003e                                         ]  5.597MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":4897006,"total":44151070},"progress":"[=====\u003e                                             ]  4.897MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":5892312,"total":28225330},"progress":"[==========\u003e                                        ]  5.892MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":6187224,"total":28225330},"progress":"[==========\u003e                                        ]  6.187MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":5339374,"total":44151070},"progress":"[======\u003e                                            ]  5.339MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":6478040,"total":28225330},"progress":"[===========\u003e                                       ]  6.478MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":6760664,"total":28225330},"progress":"[===========\u003e                                       ]  6.761MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":405,"total":405},"progress":"[==================================================\u003e]     405B/405B","id":"2b9310b2ee4b"}
+{"status":"Verifying Checksum","progressDetail":{},"id":"2b9310b2ee4b"}
+{"status":"Download complete","progressDetail":{},"id":"2b9310b2ee4b"}
+{"status":"Downloading","progressDetail":{"current":5781742,"total":44151070},"progress":"[======\u003e                                            ]  5.782MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":7055576,"total":28225330},"progress":"[============\u003e                                      ]  7.056MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":7350488,"total":28225330},"progress":"[=============\u003e                                     ]   7.35MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":6224110,"total":44151070},"progress":"[=======\u003e                                           ]  6.224MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":7645400,"total":28225330},"progress":"[=============\u003e                                     ]  7.645MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":7940312,"total":28225330},"progress":"[==============\u003e                                    ]   7.94MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":6666478,"total":44151070},"progress":"[=======\u003e                                           ]  6.666MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":8235224,"total":28225330},"progress":"[==============\u003e                                    ]  8.235MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":7108846,"total":44151070},"progress":"[========\u003e                                          ]  7.109MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":8530136,"total":28225330},"progress":"[===============\u003e                                   ]   8.53MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":8825048,"total":28225330},"progress":"[===============\u003e                                   ]  8.825MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":7551214,"total":44151070},"progress":"[========\u003e                                          ]  7.551MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":9119960,"total":28225330},"progress":"[================\u003e                                  ]   9.12MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":9414872,"total":28225330},"progress":"[================\u003e                                  ]  9.415MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":7993582,"total":44151070},"progress":"[=========\u003e                                         ]  7.994MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":9709784,"total":28225330},"progress":"[=================\u003e                                 ]   9.71MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":10004696,"total":28225330},"progress":"[=================\u003e                                 ]     10MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":8448238,"total":44151070},"progress":"[=========\u003e                                         ]  8.448MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":10299608,"total":28225330},"progress":"[==================\u003e                                ]   10.3MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":720,"total":1210},"progress":"[=============================\u003e                     ]     720B/1.21kB","id":"6c4aa022e8e1"}
+{"status":"Downloading","progressDetail":{"current":1210,"total":1210},"progress":"[==================================================\u003e]   1.21kB/1.21kB","id":"6c4aa022e8e1"}
+{"status":"Verifying Checksum","progressDetail":{},"id":"6c4aa022e8e1"}
+{"status":"Download complete","progressDetail":{},"id":"6c4aa022e8e1"}
+{"status":"Downloading","progressDetail":{"current":10594520,"total":28225330},"progress":"[==================\u003e                                ]  10.59MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":8890606,"total":44151070},"progress":"[==========\u003e                                        ]  8.891MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":10889432,"total":28225330},"progress":"[===================\u003e                               ]  10.89MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":11184344,"total":28225330},"progress":"[===================\u003e                               ]  11.18MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":9332974,"total":44151070},"progress":"[==========\u003e                                        ]  9.333MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":11479256,"total":28225330},"progress":"[====================\u003e                              ]  11.48MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":11774168,"total":28225330},"progress":"[====================\u003e                              ]  11.77MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":9787630,"total":44151070},"progress":"[===========\u003e                                       ]  9.788MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":12069080,"total":28225330},"progress":"[=====================\u003e                             ]  12.07MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":10229998,"total":44151070},"progress":"[===========\u003e                                       ]  10.23MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":12363992,"total":28225330},"progress":"[=====================\u003e                             ]  12.36MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":720,"total":1398},"progress":"[=========================\u003e                         ]     720B/1.398kB","id":"abddc69cb49d"}
+{"status":"Downloading","progressDetail":{"current":1398,"total":1398},"progress":"[==================================================\u003e]  1.398kB/1.398kB","id":"abddc69cb49d"}
+{"status":"Download complete","progressDetail":{},"id":"abddc69cb49d"}
+{"status":"Downloading","progressDetail":{"current":12658904,"total":28225330},"progress":"[======================\u003e                            ]  12.66MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":10672366,"total":44151070},"progress":"[============\u003e                                      ]  10.67MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":12953816,"total":28225330},"progress":"[======================\u003e                            ]  12.95MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":13248728,"total":28225330},"progress":"[=======================\u003e                           ]  13.25MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":11114734,"total":44151070},"progress":"[============\u003e                                      ]  11.11MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":13543640,"total":28225330},"progress":"[=======================\u003e                           ]  13.54MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":11569390,"total":44151070},"progress":"[=============\u003e                                     ]  11.57MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":13838552,"total":28225330},"progress":"[========================\u003e                          ]  13.84MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":14133464,"total":28225330},"progress":"[=========================\u003e                         ]  14.13MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":12019950,"total":44151070},"progress":"[=============\u003e                                     ]  12.02MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":14428376,"total":28225330},"progress":"[=========================\u003e                         ]  14.43MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":14723288,"total":28225330},"progress":"[==========================\u003e                        ]  14.72MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":12462318,"total":44151070},"progress":"[==============\u003e                                    ]  12.46MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":15018200,"total":28225330},"progress":"[==========================\u003e                        ]  15.02MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":12904686,"total":44151070},"progress":"[==============\u003e                                    ]   12.9MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":15313112,"total":28225330},"progress":"[===========================\u003e                       ]  15.31MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":15608024,"total":28225330},"progress":"[===========================\u003e                       ]  15.61MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":13347054,"total":44151070},"progress":"[===============\u003e                                   ]  13.35MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":15902936,"total":28225330},"progress":"[============================\u003e                      ]   15.9MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":13789422,"total":44151070},"progress":"[===============\u003e                                   ]  13.79MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":16197848,"total":28225330},"progress":"[============================\u003e                      ]   16.2MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":16492760,"total":28225330},"progress":"[=============================\u003e                     ]  16.49MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":14235886,"total":44151070},"progress":"[================\u003e                                  ]  14.24MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":16787672,"total":28225330},"progress":"[=============================\u003e                     ]  16.79MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":14678254,"total":44151070},"progress":"[================\u003e                                  ]  14.68MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":17082584,"total":28225330},"progress":"[==============================\u003e                    ]  17.08MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":17373400,"total":28225330},"progress":"[==============================\u003e                    ]  17.37MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":15132910,"total":44151070},"progress":"[=================\u003e                                 ]  15.13MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":17668312,"total":28225330},"progress":"[===============================\u003e                   ]  17.67MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":15575278,"total":44151070},"progress":"[=================\u003e                                 ]  15.58MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":17963224,"total":28225330},"progress":"[===============================\u003e                   ]  17.96MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":18258136,"total":28225330},"progress":"[================================\u003e                  ]  18.26MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":16017646,"total":44151070},"progress":"[==================\u003e                                ]  16.02MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":18553048,"total":28225330},"progress":"[================================\u003e                  ]  18.55MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":18847960,"total":28225330},"progress":"[=================================\u003e                 ]  18.85MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":16460014,"total":44151070},"progress":"[==================\u003e                                ]  16.46MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":19142872,"total":28225330},"progress":"[=================================\u003e                 ]  19.14MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":16910574,"total":44151070},"progress":"[===================\u003e                               ]  16.91MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":19437784,"total":28225330},"progress":"[==================================\u003e                ]  19.44MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":17352942,"total":44151070},"progress":"[===================\u003e                               ]  17.35MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":19732696,"total":28225330},"progress":"[==================================\u003e                ]  19.73MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":20027608,"total":28225330},"progress":"[===================================\u003e               ]  20.03MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":17795310,"total":44151070},"progress":"[====================\u003e                              ]   17.8MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":20322520,"total":28225330},"progress":"[====================================\u003e              ]  20.32MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":20617432,"total":28225330},"progress":"[====================================\u003e              ]  20.62MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":18237678,"total":44151070},"progress":"[====================\u003e                              ]  18.24MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":20912344,"total":28225330},"progress":"[=====================================\u003e             ]  20.91MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":21207256,"total":28225330},"progress":"[=====================================\u003e             ]  21.21MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":18680046,"total":44151070},"progress":"[=====================\u003e                             ]  18.68MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":21502168,"total":28225330},"progress":"[======================================\u003e            ]   21.5MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":21797080,"total":28225330},"progress":"[======================================\u003e            ]   21.8MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":22091992,"total":28225330},"progress":"[=======================================\u003e           ]  22.09MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":19122414,"total":44151070},"progress":"[=====================\u003e                             ]  19.12MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":22386904,"total":28225330},"progress":"[=======================================\u003e           ]  22.39MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":19564782,"total":44151070},"progress":"[======================\u003e                            ]  19.56MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":22681816,"total":28225330},"progress":"[========================================\u003e          ]  22.68MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":20007150,"total":44151070},"progress":"[======================\u003e                            ]  20.01MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":22976728,"total":28225330},"progress":"[========================================\u003e          ]  22.98MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":23263448,"total":28225330},"progress":"[=========================================\u003e         ]  23.26MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":20453614,"total":44151070},"progress":"[=======================\u003e                           ]  20.45MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":23558360,"total":28225330},"progress":"[=========================================\u003e         ]  23.56MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":20895982,"total":44151070},"progress":"[=======================\u003e                           ]   20.9MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":23853272,"total":28225330},"progress":"[==========================================\u003e        ]  23.85MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":21338350,"total":44151070},"progress":"[========================\u003e                          ]  21.34MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":24144088,"total":28225330},"progress":"[==========================================\u003e        ]  24.14MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":21780718,"total":44151070},"progress":"[========================\u003e                          ]  21.78MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":24439000,"total":28225330},"progress":"[===========================================\u003e       ]  24.44MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":24733912,"total":28225330},"progress":"[===========================================\u003e       ]  24.73MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":22223086,"total":44151070},"progress":"[=========================\u003e                         ]  22.22MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":25028824,"total":28225330},"progress":"[============================================\u003e      ]  25.03MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":22669550,"total":44151070},"progress":"[=========================\u003e                         ]  22.67MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":25323736,"total":28225330},"progress":"[============================================\u003e      ]  25.32MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":23111918,"total":44151070},"progress":"[==========================\u003e                        ]  23.11MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":25618648,"total":28225330},"progress":"[=============================================\u003e     ]  25.62MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":23554286,"total":44151070},"progress":"[==========================\u003e                        ]  23.55MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":23996654,"total":44151070},"progress":"[===========================\u003e                       ]     24MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":25913560,"total":28225330},"progress":"[=============================================\u003e     ]  25.91MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":26208472,"total":28225330},"progress":"[==============================================\u003e    ]  26.21MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":24439022,"total":44151070},"progress":"[===========================\u003e                       ]  24.44MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":24881390,"total":44151070},"progress":"[============================\u003e                      ]  24.88MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":26503384,"total":28225330},"progress":"[==============================================\u003e    ]   26.5MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":25323758,"total":44151070},"progress":"[============================\u003e                      ]  25.32MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":26798296,"total":28225330},"progress":"[===============================================\u003e   ]   26.8MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":25766126,"total":44151070},"progress":"[=============================\u003e                     ]  25.77MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":27093208,"total":28225330},"progress":"[===============================================\u003e   ]  27.09MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":26208494,"total":44151070},"progress":"[=============================\u003e                     ]  26.21MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":26650862,"total":44151070},"progress":"[==============================\u003e                    ]  26.65MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":27388120,"total":28225330},"progress":"[================================================\u003e  ]  27.39MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":27093230,"total":44151070},"progress":"[==============================\u003e                    ]  27.09MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":27678936,"total":28225330},"progress":"[=================================================\u003e ]  27.68MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":27535598,"total":44151070},"progress":"[===============================\u003e                   ]  27.54MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":27973848,"total":28225330},"progress":"[=================================================\u003e ]  27.97MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":27977966,"total":44151070},"progress":"[===============================\u003e                   ]  27.98MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":28420334,"total":44151070},"progress":"[================================\u003e                  ]  28.42MB/44.15MB","id":"670a101d432b"}
+{"status":"Download complete","progressDetail":{},"id":"61320b01ae5e"}
+{"status":"Extracting","progressDetail":{"current":294912,"total":28225330},"progress":"[\u003e                                                  ]  294.9kB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":28862702,"total":44151070},"progress":"[================================\u003e                  ]  28.86MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":884736,"total":28225330},"progress":"[=\u003e                                                 ]  884.7kB/28.23MB","id":"61320b01ae5e"}
+{"status":"Extracting","progressDetail":{"current":1769472,"total":28225330},"progress":"[===\u003e                                               ]  1.769MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":29305070,"total":44151070},"progress":"[=================================\u003e                 ]  29.31MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":2654208,"total":28225330},"progress":"[====\u003e                                              ]  2.654MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Extracting","progressDetail":{"current":3538944,"total":28225330},"progress":"[======\u003e                                            ]  3.539MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Extracting","progressDetail":{"current":4128768,"total":28225330},"progress":"[=======\u003e                                           ]  4.129MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":29747438,"total":44151070},"progress":"[=================================\u003e                 ]  29.75MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":5013504,"total":28225330},"progress":"[========\u003e                                          ]  5.014MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Extracting","progressDetail":{"current":5603328,"total":28225330},"progress":"[=========\u003e                                         ]  5.603MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Extracting","progressDetail":{"current":6488064,"total":28225330},"progress":"[===========\u003e                                       ]  6.488MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":30189806,"total":44151070},"progress":"[==================================\u003e                ]  30.19MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":7077888,"total":28225330},"progress":"[============\u003e                                      ]  7.078MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Extracting","progressDetail":{"current":7667712,"total":28225330},"progress":"[=============\u003e                                     ]  7.668MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Extracting","progressDetail":{"current":8552448,"total":28225330},"progress":"[===============\u003e                                   ]  8.552MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":30632174,"total":44151070},"progress":"[==================================\u003e                ]  30.63MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":9142272,"total":28225330},"progress":"[================\u003e                                  ]  9.142MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Extracting","progressDetail":{"current":9437184,"total":28225330},"progress":"[================\u003e                                  ]  9.437MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Extracting","progressDetail":{"current":10027008,"total":28225330},"progress":"[=================\u003e                                 ]  10.03MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":31074542,"total":44151070},"progress":"[===================================\u003e               ]  31.07MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":10616832,"total":28225330},"progress":"[==================\u003e                                ]  10.62MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Extracting","progressDetail":{"current":11206656,"total":28225330},"progress":"[===================\u003e                               ]  11.21MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Extracting","progressDetail":{"current":12091392,"total":28225330},"progress":"[=====================\u003e                             ]  12.09MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":31516910,"total":44151070},"progress":"[===================================\u003e               ]  31.52MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":13271040,"total":28225330},"progress":"[=======================\u003e                           ]  13.27MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Extracting","progressDetail":{"current":14450688,"total":28225330},"progress":"[=========================\u003e                         ]  14.45MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":31959278,"total":44151070},"progress":"[====================================\u003e              ]  31.96MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":15630336,"total":28225330},"progress":"[===========================\u003e                       ]  15.63MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Extracting","progressDetail":{"current":16809984,"total":28225330},"progress":"[=============================\u003e                     ]  16.81MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Extracting","progressDetail":{"current":17989632,"total":28225330},"progress":"[===============================\u003e                   ]  17.99MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":32401646,"total":44151070},"progress":"[====================================\u003e              ]   32.4MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":19169280,"total":28225330},"progress":"[=================================\u003e                 ]  19.17MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Extracting","progressDetail":{"current":19759104,"total":28225330},"progress":"[===================================\u003e               ]  19.76MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Extracting","progressDetail":{"current":20643840,"total":28225330},"progress":"[====================================\u003e              ]  20.64MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":32844014,"total":44151070},"progress":"[=====================================\u003e             ]  32.84MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":21823488,"total":28225330},"progress":"[======================================\u003e            ]  21.82MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Extracting","progressDetail":{"current":22708224,"total":28225330},"progress":"[========================================\u003e          ]  22.71MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Extracting","progressDetail":{"current":23298048,"total":28225330},"progress":"[=========================================\u003e         ]   23.3MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":33286382,"total":44151070},"progress":"[=====================================\u003e             ]  33.29MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":33728750,"total":44151070},"progress":"[======================================\u003e            ]  33.73MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":34171118,"total":44151070},"progress":"[======================================\u003e            ]  34.17MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":23887872,"total":28225330},"progress":"[==========================================\u003e        ]  23.89MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Extracting","progressDetail":{"current":24182784,"total":28225330},"progress":"[==========================================\u003e        ]  24.18MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":34613486,"total":44151070},"progress":"[=======================================\u003e           ]  34.61MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":25067520,"total":28225330},"progress":"[============================================\u003e      ]  25.07MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Extracting","progressDetail":{"current":26247168,"total":28225330},"progress":"[==============================================\u003e    ]  26.25MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":35068142,"total":44151070},"progress":"[=======================================\u003e           ]  35.07MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":26836992,"total":28225330},"progress":"[===============================================\u003e   ]  26.84MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Extracting","progressDetail":{"current":27131904,"total":28225330},"progress":"[================================================\u003e  ]  27.13MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":35518702,"total":44151070},"progress":"[========================================\u003e          ]  35.52MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":35973358,"total":44151070},"progress":"[========================================\u003e          ]  35.97MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":27426816,"total":28225330},"progress":"[================================================\u003e  ]  27.43MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":36415726,"total":44151070},"progress":"[=========================================\u003e         ]  36.42MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":28016640,"total":28225330},"progress":"[=================================================\u003e ]  28.02MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":36858094,"total":44151070},"progress":"[=========================================\u003e         ]  36.86MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":28225330,"total":28225330},"progress":"[==================================================\u003e]  28.23MB/28.23MB","id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":37300462,"total":44151070},"progress":"[==========================================\u003e        ]   37.3MB/44.15MB","id":"670a101d432b"}
+{"status":"Pull complete","progressDetail":{},"id":"61320b01ae5e"}
+{"status":"Downloading","progressDetail":{"current":37742830,"total":44151070},"progress":"[==========================================\u003e        ]  37.74MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":38185198,"total":44151070},"progress":"[===========================================\u003e       ]  38.19MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":38627566,"total":44151070},"progress":"[===========================================\u003e       ]  38.63MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":39074030,"total":44151070},"progress":"[============================================\u003e      ]  39.07MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":39516398,"total":44151070},"progress":"[============================================\u003e      ]  39.52MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":39958766,"total":44151070},"progress":"[=============================================\u003e     ]  39.96MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":40401134,"total":44151070},"progress":"[=============================================\u003e     ]   40.4MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":40843502,"total":44151070},"progress":"[==============================================\u003e    ]  40.84MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":41285870,"total":44151070},"progress":"[==============================================\u003e    ]  41.29MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":41728238,"total":44151070},"progress":"[===============================================\u003e   ]  41.73MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":42170606,"total":44151070},"progress":"[===============================================\u003e   ]  42.17MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":42612974,"total":44151070},"progress":"[================================================\u003e  ]  42.61MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":43055342,"total":44151070},"progress":"[================================================\u003e  ]  43.06MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":43497710,"total":44151070},"progress":"[=================================================\u003e ]   43.5MB/44.15MB","id":"670a101d432b"}
+{"status":"Downloading","progressDetail":{"current":43940078,"total":44151070},"progress":"[=================================================\u003e ]  43.94MB/44.15MB","id":"670a101d432b"}
+{"status":"Verifying Checksum","progressDetail":{},"id":"670a101d432b"}
+{"status":"Download complete","progressDetail":{},"id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":458752,"total":44151070},"progress":"[\u003e                                                  ]  458.8kB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":1835008,"total":44151070},"progress":"[==\u003e                                                ]  1.835MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":3211264,"total":44151070},"progress":"[===\u003e                                               ]  3.211MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":4128768,"total":44151070},"progress":"[====\u003e                                              ]  4.129MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":5505024,"total":44151070},"progress":"[======\u003e                                            ]  5.505MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":6422528,"total":44151070},"progress":"[=======\u003e                                           ]  6.423MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":7340032,"total":44151070},"progress":"[========\u003e                                          ]   7.34MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":8716288,"total":44151070},"progress":"[=========\u003e                                         ]  8.716MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":10092544,"total":44151070},"progress":"[===========\u003e                                       ]  10.09MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":11010048,"total":44151070},"progress":"[============\u003e                                      ]  11.01MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":12845056,"total":44151070},"progress":"[==============\u003e                                    ]  12.85MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":13762560,"total":44151070},"progress":"[===============\u003e                                   ]  13.76MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":15138816,"total":44151070},"progress":"[=================\u003e                                 ]  15.14MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":16515072,"total":44151070},"progress":"[==================\u003e                                ]  16.52MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":17432576,"total":44151070},"progress":"[===================\u003e                               ]  17.43MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":18350080,"total":44151070},"progress":"[====================\u003e                              ]  18.35MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":20185088,"total":44151070},"progress":"[======================\u003e                            ]  20.19MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":21102592,"total":44151070},"progress":"[=======================\u003e                           ]   21.1MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":22020096,"total":44151070},"progress":"[========================\u003e                          ]  22.02MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":22937600,"total":44151070},"progress":"[=========================\u003e                         ]  22.94MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":24313856,"total":44151070},"progress":"[===========================\u003e                       ]  24.31MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":25690112,"total":44151070},"progress":"[=============================\u003e                     ]  25.69MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":26607616,"total":44151070},"progress":"[==============================\u003e                    ]  26.61MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":27525120,"total":44151070},"progress":"[===============================\u003e                   ]  27.53MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":28442624,"total":44151070},"progress":"[================================\u003e                  ]  28.44MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":29818880,"total":44151070},"progress":"[=================================\u003e                 ]  29.82MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":30736384,"total":44151070},"progress":"[==================================\u003e                ]  30.74MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":31653888,"total":44151070},"progress":"[===================================\u003e               ]  31.65MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":32571392,"total":44151070},"progress":"[====================================\u003e              ]  32.57MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":33947648,"total":44151070},"progress":"[======================================\u003e            ]  33.95MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":34865152,"total":44151070},"progress":"[=======================================\u003e           ]  34.87MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":35782656,"total":44151070},"progress":"[========================================\u003e          ]  35.78MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":37158912,"total":44151070},"progress":"[==========================================\u003e        ]  37.16MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":38076416,"total":44151070},"progress":"[===========================================\u003e       ]  38.08MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":38535168,"total":44151070},"progress":"[===========================================\u003e       ]  38.54MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":39452672,"total":44151070},"progress":"[============================================\u003e      ]  39.45MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":40370176,"total":44151070},"progress":"[=============================================\u003e     ]  40.37MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":41287680,"total":44151070},"progress":"[==============================================\u003e    ]  41.29MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":41746432,"total":44151070},"progress":"[===============================================\u003e   ]  41.75MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":42205184,"total":44151070},"progress":"[===============================================\u003e   ]  42.21MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":43581440,"total":44151070},"progress":"[=================================================\u003e ]  43.58MB/44.15MB","id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":44151070,"total":44151070},"progress":"[==================================================\u003e]  44.15MB/44.15MB","id":"670a101d432b"}
+{"status":"Pull complete","progressDetail":{},"id":"670a101d432b"}
+{"status":"Extracting","progressDetail":{"current":629,"total":629},"progress":"[==================================================\u003e]     629B/629B","id":"405bd2df85b6"}
+{"status":"Extracting","progressDetail":{"current":629,"total":629},"progress":"[==================================================\u003e]     629B/629B","id":"405bd2df85b6"}
+{"status":"Pull complete","progressDetail":{},"id":"405bd2df85b6"}
+{"status":"Extracting","progressDetail":{"current":956,"total":956},"progress":"[==================================================\u003e]     956B/956B","id":"cc80efff8457"}
+{"status":"Extracting","progressDetail":{"current":956,"total":956},"progress":"[==================================================\u003e]     956B/956B","id":"cc80efff8457"}
+{"status":"Pull complete","progressDetail":{},"id":"cc80efff8457"}
+{"status":"Extracting","progressDetail":{"current":405,"total":405},"progress":"[==================================================\u003e]     405B/405B","id":"2b9310b2ee4b"}
+{"status":"Extracting","progressDetail":{"current":405,"total":405},"progress":"[==================================================\u003e]     405B/405B","id":"2b9310b2ee4b"}
+{"status":"Pull complete","progressDetail":{},"id":"2b9310b2ee4b"}
+{"status":"Extracting","progressDetail":{"current":1210,"total":1210},"progress":"[==================================================\u003e]   1.21kB/1.21kB","id":"6c4aa022e8e1"}
+{"status":"Extracting","progressDetail":{"current":1210,"total":1210},"progress":"[==================================================\u003e]   1.21kB/1.21kB","id":"6c4aa022e8e1"}
+{"status":"Pull complete","progressDetail":{},"id":"6c4aa022e8e1"}
+{"status":"Extracting","progressDetail":{"current":1398,"total":1398},"progress":"[==================================================\u003e]  1.398kB/1.398kB","id":"abddc69cb49d"}
+{"status":"Extracting","progressDetail":{"current":1398,"total":1398},"progress":"[==================================================\u003e]  1.398kB/1.398kB","id":"abddc69cb49d"}
+{"status":"Pull complete","progressDetail":{},"id":"abddc69cb49d"}
+{"status":"Digest: sha256:fb39280b7b9eba5727c884a3c7810002e69e8f961cc373b89c92f14961d903a0"}
+{"status":"Status: Downloaded newer image for nginx:latest"}: timestamp="2025-05-30T16:06:41.008+0530"
+2025-05-30T16:06:41.023+0530 [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/05/30 16:06:41 [DEBUG] Docker image inspect from readFunc: {
+	"Id": "sha256:be69f2940aaf64fdf50c9c99420cbd57e10ee655ec7204df1c407e9af63d0cc1",
+	"RepoTags": [
+		"nginx:latest"
+	],
+	"RepoDigests": [
+		"nginx@sha256:fb39280b7b9eba5727c884a3c7810002e69e8f961cc373b89c92f14961d903a0"
+	],
+	"Parent": "",
+	"Comment": "buildkit.dockerfile.v0",
+	"Created": "2025-04-16T14:50:31Z",
+	"Container": "",
+	"ContainerConfig": {
+		"Hostname": "",
+		"Domainname": "",
+		"User": "",
+		"AttachStdin": false,
+		"AttachStdout": false,
+		"AttachStderr": false,
+		"Tty": false,
+		"OpenStdin": false,
+		"StdinOnce": false,
+		"Env": null,
+		"Cmd": null,
+		"Image": "",
+		"Volumes": null,
+		"WorkingDir": "",
+		"Entrypoint": null,
+		"OnBuild": null,
+		"Labels": null
+	},
+	"DockerVersion": "",
+	"Author": "",
+	"Config": {
+		"Hostname": "",
+		"Domainname": "",
+		"User": "",
+		"AttachStdin": false,
+		"AttachStdout": false,
+		"AttachStderr": false,
+		"ExposedPorts": {
+			"80/tcp": {}
+		},
+		"Tty": false,
+		"OpenStdin": false,
+		"StdinOnce": false,
+		"Env": [
+			"PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+			"NGINX_VERSION=1.27.5",
+			"NJS_VERSION=0.8.10",
+			"NJS_RELEASE=1~bookworm",
+			"PKG_RELEASE=1~bookworm",
+			"DYNPKG_RELEASE=1~bookworm"
+		],
+		"Cmd": [
+			"nginx",
+			"-g",
+			"daemon off;"
+		],
+		"Image": "",
+		"Volumes": null,
+		"WorkingDir": "",
+		"Entrypoint": [
+			"/docker-entrypoint.sh"
+		],
+		"OnBuild": null,
+		"Labels": {
+			"maintainer": "NGINX Docker Maintainers \u003cdocker-maint@nginx.com\u003e"
+		},
+		"StopSignal": "SIGQUIT"
+	},
+	"Architecture": "amd64",
+	"Os": "linux",
+	"Size": 192457322,
+	"VirtualSize": 192457322,
+	"GraphDriver": {
+		"Data": {
+			"LowerDir": "/mnt/docker/overlay2/6fdd789b149cff9f3b5084edaa4030558ad18f1a001f440d1f6a551cbc7494b5/diff:/mnt/docker/overlay2/9e1ce5303f33487a9c087349c52a0f370c8fb508150664e67f721e62d87c83cd/diff:/mnt/docker/overlay2/fb931a88b8775076ab41983e7fab054e7ae547f11024ca04136f8373ace1e060/diff:/mnt/docker/overlay2/58572774da5a84a84e3ef37a2ce65bd72166829a0640db072db908da4c19687f/diff:/mnt/docker/overlay2/4f4cc1d6f3b97f5b70ac9a8a19ead3fe437a8eab1900809a3207e7acab993295/diff:/mnt/docker/overlay2/821749f75e4bb0b1b0eb86919e47adb950bc810315515c060b576ff9c68c04a8/diff",
+			"MergedDir": "/mnt/docker/overlay2/7d8f6aab3784c6861024adcb52b0700ae9fb85b7585115cc7d7c428178fae09f/merged",
+			"UpperDir": "/mnt/docker/overlay2/7d8f6aab3784c6861024adcb52b0700ae9fb85b7585115cc7d7c428178fae09f/diff",
+			"WorkDir": "/mnt/docker/overlay2/7d8f6aab3784c6861024adcb52b0700ae9fb85b7585115cc7d7c428178fae09f/work"
+		},
+		"Name": "overlay2"
+	},
+	"RootFS": {
+		"Type": "layers",
+		"Layers": [
+			"sha256:ace34d1d784c01e3f9d156687089e8f58f786e23ccd097bdbbf337d6d28b3783",
+			"sha256:deb7d8874f38d4ec281d990aac2c7badbfcd5b97d602a388056e3f918a3f8cc7",
+			"sha256:cb857378ec55670e148618776fe8c7ccd375a0a350bb2ab7db6e8891b18a43d8",
+			"sha256:a8b606cdf152c549175ee36f6d1160e743399debf5f1883acb3d5f4421fe63f7",
+			"sha256:9fd8b974f61677f6dae34af3c5703a9d51685bdf5246ea92789496e63fd8da02",
+			"sha256:f6e33ee35fd04996d3b226107a20dfc896fc6666621792f3a37629317a2e8532",
+			"sha256:941dd9dd8ee4ea76ba09f294a25cab0398e03e666b3a4f22b1b33441153eb8ed"
+		]
+	},
+	"Metadata": {
+		"LastTagTime": "0001-01-01T00:00:00Z"
+	}
+}: timestamp="2025-05-30T16:06:41.022+0530"
+2025-05-30T16:06:41.023+0530 [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/05/30 16:06:41 [DEBUG] found local image via imageName: nginx:latest: timestamp="2025-05-30T16:06:41.022+0530"
+2025-05-30T16:06:41.025+0530 [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/05/30 16:06:41 [DEBUG] local images data: sha256:be69f: timestamp="2025-05-30T16:06:41.025+0530"
+2025-05-30T16:06:41.025+0530 [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/05/30 16:06:41 [DEBUG] local images data: sha256:be69f2940aaf64fdf50c9c99420cbd57e10ee655ec7204df1c407e9af63d0cc1: timestamp="2025-05-30T16:06:41.025+0530"
+2025-05-30T16:06:41.025+0530 [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/05/30 16:06:41 [DEBUG] local images data: nginx:latest: timestamp="2025-05-30T16:06:41.025+0530"
+2025-05-30T16:06:41.025+0530 [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/05/30 16:06:41 [DEBUG] local images data: nginx@sha256:fb39280b7b9eba5727c884a3c7810002e69e8f961cc373b89c92f14961d903a0: timestamp="2025-05-30T16:06:41.025+0530"
+2025-05-30T16:06:41.029+0530 [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/05/30 16:06:41 [DEBUG] Docker image inspect from readFunc: {
+	"Id": "sha256:be69f2940aaf64fdf50c9c99420cbd57e10ee655ec7204df1c407e9af63d0cc1",
+	"RepoTags": [
+		"nginx:latest"
+	],
+	"RepoDigests": [
+		"nginx@sha256:fb39280b7b9eba5727c884a3c7810002e69e8f961cc373b89c92f14961d903a0"
+	],
+	"Parent": "",
+	"Comment": "buildkit.dockerfile.v0",
+	"Created": "2025-04-16T14:50:31Z",
+	"Container": "",
+	"ContainerConfig": {
+		"Hostname": "",
+		"Domainname": "",
+		"User": "",
+		"AttachStdin": false,
+		"AttachStdout": false,
+		"AttachStderr": false,
+		"Tty": false,
+		"OpenStdin": false,
+		"StdinOnce": false,
+		"Env": null,
+		"Cmd": null,
+		"Image": "",
+		"Volumes": null,
+		"WorkingDir": "",
+		"Entrypoint": null,
+		"OnBuild": null,
+		"Labels": null
+	},
+	"DockerVersion": "",
+	"Author": "",
+	"Config": {
+		"Hostname": "",
+		"Domainname": "",
+		"User": "",
+		"AttachStdin": false,
+		"AttachStdout": false,
+		"AttachStderr": false,
+		"ExposedPorts": {
+			"80/tcp": {}
+		},
+		"Tty": false,
+		"OpenStdin": false,
+		"StdinOnce": false,
+		"Env": [
+			"PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+			"NGINX_VERSION=1.27.5",
+			"NJS_VERSION=0.8.10",
+			"NJS_RELEASE=1~bookworm",
+			"PKG_RELEASE=1~bookworm",
+			"DYNPKG_RELEASE=1~bookworm"
+		],
+		"Cmd": [
+			"nginx",
+			"-g",
+			"daemon off;"
+		],
+		"Image": "",
+		"Volumes": null,
+		"WorkingDir": "",
+		"Entrypoint": [
+			"/docker-entrypoint.sh"
+		],
+		"OnBuild": null,
+		"Labels": {
+			"maintainer": "NGINX Docker Maintainers \u003cdocker-maint@nginx.com\u003e"
+		},
+		"StopSignal": "SIGQUIT"
+	},
+	"Architecture": "amd64",
+	"Os": "linux",
+	"Size": 192457322,
+	"VirtualSize": 192457322,
+	"GraphDriver": {
+		"Data": {
+			"LowerDir": "/mnt/docker/overlay2/6fdd789b149cff9f3b5084edaa4030558ad18f1a001f440d1f6a551cbc7494b5/diff:/mnt/docker/overlay2/9e1ce5303f33487a9c087349c52a0f370c8fb508150664e67f721e62d87c83cd/diff:/mnt/docker/overlay2/fb931a88b8775076ab41983e7fab054e7ae547f11024ca04136f8373ace1e060/diff:/mnt/docker/overlay2/58572774da5a84a84e3ef37a2ce65bd72166829a0640db072db908da4c19687f/diff:/mnt/docker/overlay2/4f4cc1d6f3b97f5b70ac9a8a19ead3fe437a8eab1900809a3207e7acab993295/diff:/mnt/docker/overlay2/821749f75e4bb0b1b0eb86919e47adb950bc810315515c060b576ff9c68c04a8/diff",
+			"MergedDir": "/mnt/docker/overlay2/7d8f6aab3784c6861024adcb52b0700ae9fb85b7585115cc7d7c428178fae09f/merged",
+			"UpperDir": "/mnt/docker/overlay2/7d8f6aab3784c6861024adcb52b0700ae9fb85b7585115cc7d7c428178fae09f/diff",
+			"WorkDir": "/mnt/docker/overlay2/7d8f6aab3784c6861024adcb52b0700ae9fb85b7585115cc7d7c428178fae09f/work"
+		},
+		"Name": "overlay2"
+	},
+	"RootFS": {
+		"Type": "layers",
+		"Layers": [
+			"sha256:ace34d1d784c01e3f9d156687089e8f58f786e23ccd097bdbbf337d6d28b3783",
+			"sha256:deb7d8874f38d4ec281d990aac2c7badbfcd5b97d602a388056e3f918a3f8cc7",
+			"sha256:cb857378ec55670e148618776fe8c7ccd375a0a350bb2ab7db6e8891b18a43d8",
+			"sha256:a8b606cdf152c549175ee36f6d1160e743399debf5f1883acb3d5f4421fe63f7",
+			"sha256:9fd8b974f61677f6dae34af3c5703a9d51685bdf5246ea92789496e63fd8da02",
+			"sha256:f6e33ee35fd04996d3b226107a20dfc896fc6666621792f3a37629317a2e8532",
+			"sha256:941dd9dd8ee4ea76ba09f294a25cab0398e03e666b3a4f22b1b33441153eb8ed"
+		]
+	},
+	"Metadata": {
+		"LastTagTime": "0001-01-01T00:00:00Z"
+	}
+}: timestamp="2025-05-30T16:06:41.029+0530"
+2025-05-30T16:06:41.029+0530 [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/05/30 16:06:41 [DEBUG] found local image via imageName: nginx:latest: timestamp="2025-05-30T16:06:41.029+0530"
+[0m[1mdocker_image.nginx: Creation complete after 1m18s [id=sha256:be69f2940aaf64fdf50c9c99420cbd57e10ee655ec7204df1c407e9af63d0cc1nginx:latest][0m
+2025-05-30T16:06:41.037+0530 [DEBUG] State storage *statemgr.Filesystem declined to persist a state snapshot
+2025-05-30T16:06:41.045+0530 [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/05/30 16:06:41 [DEBUG] suppress diff ports: old and new don't have the same length: timestamp="2025-05-30T16:06:41.045+0530"
+2025-05-30T16:06:41.045+0530 [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/05/30 16:06:41 [DEBUG] suppress diff ports: old and new don't have the same length: timestamp="2025-05-30T16:06:41.045+0530"
+2025-05-30T16:06:41.045+0530 [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/05/30 16:06:41 [DEBUG] suppress diff ports: old and new don't have the same length: timestamp="2025-05-30T16:06:41.045+0530"
+2025-05-30T16:06:41.045+0530 [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/05/30 16:06:41 [DEBUG] suppress diff ports: old and new don't have the same length: timestamp="2025-05-30T16:06:41.045+0530"
+2025-05-30T16:06:41.045+0530 [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/05/30 16:06:41 [DEBUG] suppress diff ports: old and new don't have the same length: timestamp="2025-05-30T16:06:41.045+0530"
+2025-05-30T16:06:41.049+0530 [WARN]  Provider "registry.terraform.io/kreuzwerker/docker" produced an invalid plan for docker_container.devops_container, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .start: planned value cty.True for a non-computed attribute
+      - .wait: planned value cty.False for a non-computed attribute
+      - .wait_timeout: planned value cty.NumberIntVal(60) for a non-computed attribute
+      - .attach: planned value cty.False for a non-computed attribute
+      - .restart: planned value cty.StringVal("no") for a non-computed attribute
+      - .remove_volumes: planned value cty.True for a non-computed attribute
+      - .logs: planned value cty.False for a non-computed attribute
+      - .must_run: planned value cty.True for a non-computed attribute
+      - .rm: planned value cty.False for a non-computed attribute
+      - .read_only: planned value cty.False for a non-computed attribute
+      - .stdin_open: planned value cty.False for a non-computed attribute
+      - .tty: planned value cty.False for a non-computed attribute
+      - .container_read_refresh_timeout_milliseconds: planned value cty.NumberIntVal(15000) for a non-computed attribute
+      - .labels: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .healthcheck: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .ports[0].protocol: planned value cty.StringVal("tcp") for a non-computed attribute
+      - .ports[0].ip: planned value cty.StringVal("0.0.0.0") for a non-computed attribute
+[0m[1mdocker_container.devops_container: Creating...[0m[0m
+2025-05-30T16:06:41.050+0530 [INFO]  Starting apply for docker_container.devops_container
+2025-05-30T16:06:41.051+0530 [DEBUG] docker_container.devops_container: applying the planned Create change
+2025-05-30T16:06:41.056+0530 [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/05/30 16:06:41 [DEBUG] setting computed for "labels" from ComputedKeys: timestamp="2025-05-30T16:06:41.056+0530"
+2025-05-30T16:06:41.056+0530 [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/05/30 16:06:41 [DEBUG] setting computed for "network_data" from ComputedKeys: timestamp="2025-05-30T16:06:41.056+0530"
+2025-05-30T16:06:41.056+0530 [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/05/30 16:06:41 [DEBUG] setting computed for "entrypoint" from ComputedKeys: timestamp="2025-05-30T16:06:41.056+0530"
+2025-05-30T16:06:41.056+0530 [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/05/30 16:06:41 [DEBUG] suppress diff ports: old and new don't have the same length: timestamp="2025-05-30T16:06:41.056+0530"
+2025-05-30T16:06:41.056+0530 [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/05/30 16:06:41 [DEBUG] suppress diff ports: old and new don't have the same length: timestamp="2025-05-30T16:06:41.056+0530"
+2025-05-30T16:06:41.056+0530 [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/05/30 16:06:41 [DEBUG] suppress diff ports: old and new don't have the same length: timestamp="2025-05-30T16:06:41.056+0530"
+2025-05-30T16:06:41.056+0530 [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/05/30 16:06:41 [DEBUG] suppress diff ports: old and new don't have the same length: timestamp="2025-05-30T16:06:41.056+0530"
+2025-05-30T16:06:41.057+0530 [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/05/30 16:06:41 [DEBUG] suppress diff ports: old and new don't have the same length: timestamp="2025-05-30T16:06:41.056+0530"
+2025-05-30T16:06:41.057+0530 [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/05/30 16:06:41 [DEBUG] setting computed for "security_opts" from ComputedKeys: timestamp="2025-05-30T16:06:41.056+0530"
+2025-05-30T16:06:41.057+0530 [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/05/30 16:06:41 [DEBUG] setting computed for "command" from ComputedKeys: timestamp="2025-05-30T16:06:41.057+0530"
+2025-05-30T16:06:41.057+0530 [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/05/30 16:06:41 [DEBUG] setting computed for "healthcheck" from ComputedKeys: timestamp="2025-05-30T16:06:41.057+0530"
+2025-05-30T16:06:41.057+0530 [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/05/30 16:06:41 [DEBUG] setting computed for "env" from ComputedKeys: timestamp="2025-05-30T16:06:41.057+0530"
+2025-05-30T16:06:41.068+0530 [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/05/30 16:06:41 [DEBUG] Docker image inspect from readFunc: {
+	"Id": "sha256:be69f2940aaf64fdf50c9c99420cbd57e10ee655ec7204df1c407e9af63d0cc1",
+	"RepoTags": [
+		"nginx:latest"
+	],
+	"RepoDigests": [
+		"nginx@sha256:fb39280b7b9eba5727c884a3c7810002e69e8f961cc373b89c92f14961d903a0"
+	],
+	"Parent": "",
+	"Comment": "buildkit.dockerfile.v0",
+	"Created": "2025-04-16T14:50:31Z",
+	"Container": "",
+	"ContainerConfig": {
+		"Hostname": "",
+		"Domainname": "",
+		"User": "",
+		"AttachStdin": false,
+		"AttachStdout": false,
+		"AttachStderr": false,
+		"Tty": false,
+		"OpenStdin": false,
+		"StdinOnce": false,
+		"Env": null,
+		"Cmd": null,
+		"Image": "",
+		"Volumes": null,
+		"WorkingDir": "",
+		"Entrypoint": null,
+		"OnBuild": null,
+		"Labels": null
+	},
+	"DockerVersion": "",
+	"Author": "",
+	"Config": {
+		"Hostname": "",
+		"Domainname": "",
+		"User": "",
+		"AttachStdin": false,
+		"AttachStdout": false,
+		"AttachStderr": false,
+		"ExposedPorts": {
+			"80/tcp": {}
+		},
+		"Tty": false,
+		"OpenStdin": false,
+		"StdinOnce": false,
+		"Env": [
+			"PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+			"NGINX_VERSION=1.27.5",
+			"NJS_VERSION=0.8.10",
+			"NJS_RELEASE=1~bookworm",
+			"PKG_RELEASE=1~bookworm",
+			"DYNPKG_RELEASE=1~bookworm"
+		],
+		"Cmd": [
+			"nginx",
+			"-g",
+			"daemon off;"
+		],
+		"Image": "",
+		"Volumes": null,
+		"WorkingDir": "",
+		"Entrypoint": [
+			"/docker-entrypoint.sh"
+		],
+		"OnBuild": null,
+		"Labels": {
+			"maintainer": "NGINX Docker Maintainers \u003cdocker-maint@nginx.com\u003e"
+		},
+		"StopSignal": "SIGQUIT"
+	},
+	"Architecture": "amd64",
+	"Os": "linux",
+	"Size": 192457322,
+	"VirtualSize": 192457322,
+	"GraphDriver": {
+		"Data": {
+			"LowerDir": "/mnt/docker/overlay2/6fdd789b149cff9f3b5084edaa4030558ad18f1a001f440d1f6a551cbc7494b5/diff:/mnt/docker/overlay2/9e1ce5303f33487a9c087349c52a0f370c8fb508150664e67f721e62d87c83cd/diff:/mnt/docker/overlay2/fb931a88b8775076ab41983e7fab054e7ae547f11024ca04136f8373ace1e060/diff:/mnt/docker/overlay2/58572774da5a84a84e3ef37a2ce65bd72166829a0640db072db908da4c19687f/diff:/mnt/docker/overlay2/4f4cc1d6f3b97f5b70ac9a8a19ead3fe437a8eab1900809a3207e7acab993295/diff:/mnt/docker/overlay2/821749f75e4bb0b1b0eb86919e47adb950bc810315515c060b576ff9c68c04a8/diff",
+			"MergedDir": "/mnt/docker/overlay2/7d8f6aab3784c6861024adcb52b0700ae9fb85b7585115cc7d7c428178fae09f/merged",
+			"UpperDir": "/mnt/docker/overlay2/7d8f6aab3784c6861024adcb52b0700ae9fb85b7585115cc7d7c428178fae09f/diff",
+			"WorkDir": "/mnt/docker/overlay2/7d8f6aab3784c6861024adcb52b0700ae9fb85b7585115cc7d7c428178fae09f/work"
+		},
+		"Name": "overlay2"
+	},
+	"RootFS": {
+		"Type": "layers",
+		"Layers": [
+			"sha256:ace34d1d784c01e3f9d156687089e8f58f786e23ccd097bdbbf337d6d28b3783",
+			"sha256:deb7d8874f38d4ec281d990aac2c7badbfcd5b97d602a388056e3f918a3f8cc7",
+			"sha256:cb857378ec55670e148618776fe8c7ccd375a0a350bb2ab7db6e8891b18a43d8",
+			"sha256:a8b606cdf152c549175ee36f6d1160e743399debf5f1883acb3d5f4421fe63f7",
+			"sha256:9fd8b974f61677f6dae34af3c5703a9d51685bdf5246ea92789496e63fd8da02",
+			"sha256:f6e33ee35fd04996d3b226107a20dfc896fc6666621792f3a37629317a2e8532",
+			"sha256:941dd9dd8ee4ea76ba09f294a25cab0398e03e666b3a4f22b1b33441153eb8ed"
+		]
+	},
+	"Metadata": {
+		"LastTagTime": "0001-01-01T00:00:00Z"
+	}
+}: timestamp="2025-05-30T16:06:41.067+0530"
+2025-05-30T16:06:41.068+0530 [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/05/30 16:06:41 [DEBUG] found local image via imageName: sha256:be69f2940aaf64fdf50c9c99420cbd57e10ee655ec7204df1c407e9af63d0cc1: timestamp="2025-05-30T16:06:41.068+0530"
+2025-05-30T16:06:41.582+0530 [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/05/30 16:06:41 [INFO] retContainer container.ContainerCreateCreatedBody{ID:"221434cc00c082d7b7f8abd34febb1d8710a3ef44f86c09219d96608da642a8e", Warnings:[]string{}}: timestamp="2025-05-30T16:06:41.581+0530"
+2025-05-30T16:06:43.319+0530 [ERROR] provider.terraform-provider-docker_v3.0.2: Response contains error diagnostic: tf_resource_type=docker_container tf_rpc=ApplyResourceChange @module=sdk.proto diagnostic_detail="" diagnostic_severity=ERROR tf_provider_addr=provider @caller=github.com/hashicorp/terraform-plugin-go@v0.14.3/tfprotov5/internal/diag/diagnostics.go:55 diagnostic_summary="Unable to start container: Error response from daemon: failed to set up container networking: driver failed programming external connectivity on endpoint devops-terraform-container (a3016f221894efff341c1b4c0c9cccd9cff4261dd5be6fe495c0e979816e9041): failed to bind host port for 0.0.0.0:8080:172.17.0.2:80/tcp: address already in use" tf_proto_version=5.3 tf_req_id=cb5c6c18-4b70-6759-afcf-d57f82067846 timestamp="2025-05-30T16:06:43.319+0530"
+2025-05-30T16:06:43.338+0530 [DEBUG] State storage *statemgr.Filesystem declined to persist a state snapshot
+2025-05-30T16:06:43.338+0530 [ERROR] vertex "docker_container.devops_container" error: Unable to start container: Error response from daemon: failed to set up container networking: driver failed programming external connectivity on endpoint devops-terraform-container (a3016f221894efff341c1b4c0c9cccd9cff4261dd5be6fe495c0e979816e9041): failed to bind host port for 0.0.0.0:8080:172.17.0.2:80/tcp: address already in use
+[31m╷[0m[0m
+[31m│[0m [0m[1m[31mError: [0m[0m[1mUnable to start container: Error response from daemon: failed to set up container networking: driver failed programming external connectivity on endpoint devops-terraform-container (a3016f221894efff341c1b4c0c9cccd9cff4261dd5be6fe495c0e979816e9041): failed to bind host port for 0.0.0.0:8080:172.17.0.2:80/tcp: address already in use[0m
+[31m│[0m [0m
+[31m│[0m [0m[0m  with docker_container.devops_container,
+[31m│[0m [0m  on main.tf line 17, in resource "docker_container" "devops_container":
+[31m│[0m [0m  17: resource "docker_container" "devops_container" [4m{[0m[0m
+[31m│[0m [0m
+[31m╵[0m[0m
+2025-05-30T16:06:43.357+0530 [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2025-05-30T16:06:43.366+0530 [INFO]  provider: plugin process exited: plugin=.terraform/providers/registry.terraform.io/kreuzwerker/docker/3.0.2/linux_amd64/terraform-provider-docker_v3.0.2 id=31836
+2025-05-30T16:06:43.366+0530 [DEBUG] provider: plugin exited
